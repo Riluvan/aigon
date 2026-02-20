@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Design tokens ────────────────────────── */
+:root {
+  --color-primary-start: #0068AB;
+  --color-primary-end:   #0083D4;
+  --color-primary:       #0083D4;
+  --color-primary-dark:  #0068AB;
+  --color-foreground:    #1e293b;
+  --color-muted-fg:      #334155;
+  --color-border:        #e2e8f0;
+  --color-muted:         #F1F5F9;
+  --gradient-primary: linear-gradient(135deg, #0068AB 0%, #0083D4 100%);
+}
+
+/* ── Base reset ─────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  color: var(--color-foreground);
+  background-color: #ffffff;
+  background-image: url('./assets/Top-BG.png');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-width: 320px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Manrope', system-ui, sans-serif;
+}
+
+/* ── Primary gradient button helper ─────────── */
+.btn-gradient {
+  background: var(--gradient-primary);
+}
+.btn-gradient:hover {
+  background: linear-gradient(135deg, #005a94 0%, #006fbd 100%);
+}
+
+/* ══════════════════════════════════════════════
+   TYPOGRAPHY SCALE
+   h1  60px / 60px
+   h2  48px / 48px
+   h3  36px / 40px
+   h4  30px / 36px
+   h5  24px / 32px
+══════════════════════════════════════════════ */
+
+h1 {
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+h2 {
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+h3 {
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 700;
+  margin: 0;
+}
+
+h4 {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 600;
+  margin: 0;
+}
+
+h5 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Responsive typography */
+@media (max-width: 1024px) {
+  h1 { font-size: 48px; line-height: 52px; }
+  h2 { font-size: 36px; line-height: 40px; }
+  h3 { font-size: 28px; line-height: 34px; }
+}
+
+@media (max-width: 640px) {
+  h1 { font-size: 36px; line-height: 42px; }
+  h2 { font-size: 28px; line-height: 34px; }
+  h3 { font-size: 22px; line-height: 30px; }
+  h4 { font-size: 20px; line-height: 28px; }
+  h5 { font-size: 18px; line-height: 26px; }
+}
+
+/* ── Aigon typography helpers ────────────────── */
+.ag-h5 {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+/* ── Button resets ───────────────────────────── */
+button { cursor: pointer; border: none; background: none; }
+
+/* ── Link resets ─────────────────────────────── */
+a { text-decoration: none; }
+
+/* ── Scroll-to-top button ────────────────────── */
+#scrollTopBtn {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+#scrollTopBtn.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+#scrollTopBtn:hover { transform: translateY(-2px); }
+
+/* ── Slider dot transition ───────────────────── */
+.slider-dot { transition: width 0.3s ease, background-color 0.3s ease; }
+
+/* ── Turbine fan rotation ────────────────────── */
+@keyframes spin-fan {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.fan-spin {
+  animation: spin-fan 6s linear infinite;
+  transform-origin: center center;
+}
+
+/* ── Logo marquee carousel ───────────────────── */
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee 18s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
