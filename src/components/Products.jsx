@@ -1,35 +1,37 @@
 import { useState, useEffect, useRef } from 'react'
-import smartTurbineImg from '../assets/Rectangle.png'
+import img1 from '../assets/Rectangle.png'
+import img2 from '../assets/Rectangle (1).png'
+import img3 from '../assets/service-image10 1.png'
 
 const products = [
   {
     title: 'Smart Wind Turbines',
     desc: 'Compact horizontal and vertical axis turbines engineered for rooftop, campus, telecom, and industrial applications, with modular and recyclable construction.',
-    img: smartTurbineImg,
+    img: img1,
     imgAlt: 'Smart wind turbines on a rooftop building',
   },
   {
     title: 'Hybrid Controllers',
     desc: 'Universal hybrid charge controllers that manage multiple energy sources with intelligent MPPT algorithms for maximum efficiency.',
-    img: smartTurbineImg,
+    img: img2,
     imgAlt: 'Hybrid charge controllers',
   },
   {
     title: 'Solar Modules',
     desc: 'High-efficiency mono-crystalline solar modules designed for integration with wind systems in hybrid configurations.',
-    img: smartTurbineImg,
+    img: img3,
     imgAlt: 'Solar modules',
   },
   {
     title: 'Data Loggers',
     desc: 'AI-enabled data logging systems that provide real-time monitoring, analytics, and remote management for energy installations.',
-    img: smartTurbineImg,
+    img: img1,
     imgAlt: 'Data loggers for energy monitoring',
   },
   {
     title: 'Grid-Interactive Systems',
     desc: 'Complete grid-direct solutions combining wind turbines with grid-tie inverters for seamless power export and net metering.',
-    img: smartTurbineImg,
+    img: img2,
     imgAlt: 'Grid-interactive wind-solar system',
   },
 ]
@@ -59,10 +61,10 @@ export default function Products() {
   return (
     <section id="products" className="bg-white/90 py-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
           {/* Product image */}
-          <div className="rounded-2xl overflow-hidden h-72 lg:h-80" data-aos="fade-right">
+          <div className="rounded-2xl overflow-hidden h-72 md:h-80" data-aos="fade-right">
             <img
               src={product.img}
               alt={product.imgAlt}
@@ -94,7 +96,7 @@ export default function Products() {
             {/* h2: 48px / 48px */}
             <h2 className="text-foreground mb-4">{product.title}</h2>
 
-            <p className="text-muted-foreground leading-relaxed mb-8 text-sm lg:text-base">
+            <p className="text-muted-foreground leading-relaxed mb-8 text-sm md:text-base">
               {product.desc}
             </p>
 

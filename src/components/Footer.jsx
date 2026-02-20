@@ -53,7 +53,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
         {/* Top grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-border">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-border">
 
           {/* Brand */}
           <address className="not-italic" data-aos="fade-up" data-aos-delay="0">
@@ -82,7 +82,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-8">
           <p className="text-xs text-muted-foreground">Aigon © 2025. All Rights Reserved.</p>
 
           <div className="flex items-center gap-5">

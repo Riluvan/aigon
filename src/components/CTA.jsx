@@ -10,7 +10,7 @@ export default function CTA() {
         {/* h2: 48px / 48px */}
         <h2 className="text-slate-800 mb-4">Engineer Your Energy System</h2>
 
-        <p className="text-slate-500 mb-10 max-w-md mx-auto text-sm lg:text-base">
+        <p className="text-slate-500 mb-10 max-w-md mx-auto text-sm md:text-base">
           Automated hybrid wind systems for real world energy efficient solutions.
         </p>
 

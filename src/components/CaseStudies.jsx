@@ -1,23 +1,25 @@
 import { useState, useEffect, useRef } from 'react'
-import caseImg from '../assets/image 1.png'
+import img1 from '../assets/Rectangle.png'
+import img2 from '../assets/Rectangle (1).png'
+import img3 from '../assets/service-image10 1.png'
 
 const cases = [
   {
     title: 'Infosys Grid-Direct Turbine',
     desc: 'Automated hybrid wind systems for real world energy efficient solutions.',
-    img: caseImg,
+    img: img1,
     imgAlt: 'Infosys grid-direct wind turbine installation',
   },
   {
     title: 'IIT Palakkad Wind System',
     desc: 'A campus-scale wind energy deployment supporting clean power research and education infrastructure.',
-    img: caseImg,
+    img: img2,
     imgAlt: 'IIT Palakkad campus wind system',
   },
   {
     title: 'DST Micro-Grid Project',
     desc: 'Department of Science & Technology funded rural micro-grid combining wind and solar for off-grid electrification.',
-    img: caseImg,
+    img: img3,
     imgAlt: 'DST micro-grid project',
   },
 ]
@@ -47,10 +49,10 @@ export default function CaseStudies() {
   return (
     <section className="bg-white/90 py-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
           {/* Left: Case study photo */}
-          <div className="rounded-2xl overflow-hidden h-72 lg:h-80" data-aos="fade-right">
+          <div className="rounded-2xl overflow-hidden h-72 md:h-80" data-aos="fade-right">
             <img
               src={study.img}
               alt={study.imgAlt}
@@ -82,7 +84,7 @@ export default function CaseStudies() {
             {/* h2: 48px / 48px */}
             <h2 className="text-foreground mb-4">{study.title}</h2>
 
-            <p className="text-muted-foreground leading-relaxed mb-8 text-sm lg:text-base">
+            <p className="text-muted-foreground leading-relaxed mb-8 text-sm md:text-base">
               {study.desc}
             </p>
 

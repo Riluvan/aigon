@@ -88,7 +88,7 @@ export default function Features() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10 space-y-14">
 
         {/* Feature Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-start">
           {featureCards.map((card, i) => (
             <article
               key={i}
@@ -128,13 +128,13 @@ export default function Features() {
         </div>
 
         {/* Designs Custom Engineering Solution */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start pb-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start pb-4">
           <div data-aos="fade-right">
             {/* h2: 48px / 48px */}
             <h2 className="text-foreground mb-4">
               Designs Custom<br />Engineering Solution
             </h2>
-            <p className="text-muted-foreground text-sm lg:text-base leading-relaxed max-w-sm">
+            <p className="text-muted-foreground text-sm md:text-base leading-relaxed max-w-sm">
               Integrates engineering excellence with intelligent energy management to deliver
               reliable, distributed, clean power solutions for various industries.
             </p>

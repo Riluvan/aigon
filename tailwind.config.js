@@ -16,8 +16,8 @@ export default {
         muted: '#F1F5F9',
       },
       fontFamily: {
-        sans:      ['Manrope', 'system-ui', 'sans-serif'],
-        secondary: ['DM Sans', 'system-ui', 'sans-serif'],
+        sans:    ['DM Sans', 'system-ui', 'sans-serif'],
+        heading: ['Manrope', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         'h1': ['60px', { lineHeight: '60px', fontWeight: '800' }],

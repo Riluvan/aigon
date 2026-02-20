@@ -94,13 +94,15 @@ h5 {
 }
 
 /* Responsive typography */
+/* Tablet: 768px – 1024px */
 @media (max-width: 1024px) {
   h1 { font-size: 48px; line-height: 52px; }
   h2 { font-size: 36px; line-height: 40px; }
   h3 { font-size: 28px; line-height: 34px; }
 }
 
-@media (max-width: 640px) {
+/* Mobile: below 768px */
+@media (max-width: 767px) {
   h1 { font-size: 36px; line-height: 42px; }
   h2 { font-size: 28px; line-height: 34px; }
   h3 { font-size: 22px; line-height: 30px; }

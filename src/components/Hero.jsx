@@ -5,10 +5,10 @@ import arrowDown from '../assets/arrow-down.svg'
 export default function Hero() {
   return (
     <section
-      className="relative min-h-screen flex items-center overflow-hidden pt-16"
+      className="relative min-h-screen overflow-hidden pt-16"
       aria-label="Hero — Distributed Clean Power"
     >
-      {/* Soft blue radial glow top-right (replaces Top-BG wave) */}
+      {/* Soft blue radial glow top-right */}
       <div
         className="absolute top-0 right-0 w-[65%] h-full pointer-events-none"
         aria-hidden="true"
@@ -18,10 +18,41 @@ export default function Hero() {
         }}
       />
 
-      {/* Text — constrained to left half */}
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-10 w-full">
-        <div className="flex items-center min-h-[calc(100vh-4rem)] py-20 lg:py-0">
-          <div className="w-full lg:w-1/2 z-10" data-aos="fade-right" data-aos-delay="100">
+      {/* Layout wrapper — column on mobile, row on md+ */}
+      <div className="flex flex-col md:flex-row md:items-center md:min-h-[calc(100vh-4rem)]">
+
+        {/* Mobile turbine — top, only below md */}
+        <div
+          className="md:hidden flex justify-center pt-6 pb-2 w-full"
+          data-aos="fade-down"
+          data-aos-delay="100"
+        >
+          <div className="relative w-[280px] h-[280px]">
+            <img
+              src={turbineLeg}
+              alt="Wind turbine"
+              className="absolute bottom-0 w-[14px] h-[148px] object-fill"
+              style={{ left: '43.5%' }}
+              loading="eager"
+            />
+            <div
+              className="absolute z-10"
+              style={{ top: '132px', left: '10%', transform: 'translate(-10%, -50%)' }}
+            >
+              <img
+                src={turbineFan}
+                alt=""
+                aria-hidden="true"
+                className="fan-spin block w-[264px] h-[264px]"
+                loading="eager"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Text content */}
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-10 w-full py-10 md:py-20 lg:py-0">
+          <div className="w-full md:w-1/2 z-10" data-aos="fade-right" data-aos-delay="100">
             <p className="ag-h5 text-muted-foreground mb-3">
               Engineering the future of
             </p>
@@ -51,49 +82,41 @@ export default function Hero() {
                 aria-label="Scroll to features"
                 className="flex items-center w-11 h-11 transition-all group"
               >
-                <img
-                  src={arrowDown}
-                  alt=""
-                  aria-hidden="true"
-                />
+                <img src={arrowDown} alt="" aria-hidden="true" />
               </a>
             </div>
           </div>
         </div>
+
       </div>
 
-      {/* Turbine — absolutely positioned to right edge of section, free from grid constraints.
-          Layout math:
-            Fan  640×640 → half-height = 320px (hub / rotation center)
-            Leg  360px tall, 32px wide  → top of leg = hub center
-            Container height = 320 + 360 = 680px
-            Fan center Y from container top = 680 − 360 = 320px
-      */}
+      {/* Tablet + Desktop turbine — absolute right, vertically centered, md and up */}
       <div
-        className="hidden lg:block absolute right-0 bottom-0 z-0"
+        className="hidden md:block absolute right-0 z-0 md:top-[20%] lg:top-[15%]"
         data-aos="fade-left"
         data-aos-delay="200"
       >
-        <div className="relative w-[680px] h-[680px]">
+        <div className="relative md:w-[420px] md:h-[420px] lg:w-[680px] lg:h-[680px]">
 
-          {/* Leg — 360×32px, anchored to bottom */}
+          {/* Leg */}
           <img
             src={turbineLeg}
             alt="Wind turbine"
-            className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[32px] h-[360px] object-fill"
+            className="absolute bottom-0 object-fill md:w-[20px] md:h-[222px] lg:w-[32px] lg:h-[360px]"
+            style={{ left: '43.5%' }}
             loading="eager"
           />
 
-          {/* Fan — 640×640px, hub center at Y=320px */}
+          {/* Fan */}
           <div
-            className="absolute left-1/2 z-10"
-            style={{ top: '320px', transform: 'translate(-50%, -50%)' }}
+            className="absolute z-10 md:top-[198px] lg:top-[320px]"
+            style={{ left: '10%', transform: 'translate(-10%, -50%)' }}
           >
             <img
               src={turbineFan}
               alt=""
               aria-hidden="true"
-              className="fan-spin block w-[640px] h-[640px]"
+              className="fan-spin block md:w-[396px] md:h-[396px] lg:w-[640px] lg:h-[640px]"
               loading="eager"
             />
           </div>
