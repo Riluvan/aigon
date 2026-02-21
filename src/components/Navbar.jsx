@@ -63,10 +63,10 @@ export default function Navbar() {
               <a
                 key={link.label}
                 href={link.href}
-                className={`text-sm font-medium transition-colors hover:text-foreground ${
+                className={`transition-colors hover:text-foreground ${
                   link.label === 'Home'
-                    ? 'text-foreground relative after:absolute after:bottom-[-6px] after:left-0 after:right-0 after:h-0.5 after:bg-primary after:rounded-full'
-                    : 'text-muted-foreground'
+                    ? 'ag-semi-bold text-foreground relative after:absolute after:bottom-[-6px] after:left-0 after:right-0 after:h-0.5 after:bg-primary after:rounded-full'
+                    : 'ag-medium text-muted-foreground'
                 }`}
               >
                 {link.label}
@@ -77,14 +77,14 @@ export default function Navbar() {
           {/* CTA */}
           <a
             href="#"
-            className="hidden md:inline-flex items-center px-5 py-2.5 btn-gradient text-white text-sm font-semibold rounded-full transition-all"
+            className="hidden md:inline-flex items-center px-5 py-2.5 btn-gradient text-white ag-medium-sm rounded-full"
           >
             Try it yourself
           </a>
 
           {/* Mobile toggle */}
           <button
-            className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors"
+            className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors text-foreground"
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen((v) => !v)}
@@ -104,14 +104,14 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-border px-6 py-5 space-y-4">
+        <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-border px-6 py-5 space-y-4 w-screen max-w-full">
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className={`block text-sm font-medium hover:text-primary transition-colors ${
-                link.label === 'Home' ? 'text-primary font-semibold' : 'text-muted-foreground'
+              className={`block hover:text-primary transition-colors ${
+                link.label === 'Home' ? 'ag-semi-bold text-primary' : 'ag-medium text-muted-foreground'
               }`}
             >
               {link.label}
@@ -120,7 +120,7 @@ export default function Navbar() {
           <a
             href="#"
             onClick={() => setMenuOpen(false)}
-            className="inline-flex items-center px-5 py-2.5 btn-gradient text-white text-sm font-semibold rounded-full"
+            className="inline-flex items-center px-5 py-2.5 btn-gradient text-white ag-medium-sm rounded-full"
           >
             Try it yourself
           </a>

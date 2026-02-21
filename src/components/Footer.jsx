@@ -35,11 +35,11 @@ const socialIcons = [
 function FooterLinks({ title, links, ariaLabel }) {
   return (
     <nav aria-label={ariaLabel}>
-      <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-5">{title}</p>
+      <p className="ag-medium-sm mb-5" style={{ color: 'rgba(51, 65, 85, 0.7)' }}>{title}</p>
       <ul className="space-y-3 list-none p-0 m-0">
         {links.map((l) => (
           <li key={l}>
-            <a href="#" className="text-sm text-foreground hover:text-primary transition-colors">{l}</a>
+            <a href="#" className="ag-medium-sm text-foreground hover:text-primary transition-colors">{l}</a>
           </li>
         ))}
       </ul>
@@ -58,20 +58,20 @@ export default function Footer() {
           {/* Brand */}
           <address className="not-italic" data-aos="fade-up" data-aos-delay="0">
             <img src={footerLogo} alt="Aigon" className="h-7 w-auto mb-6" />
-            <p className="text-sm font-semibold text-foreground mb-1">Aigon Mechatronics Pvt. Ltd.</p>
-            <p className="text-xs text-muted-foreground leading-relaxed mb-5">
+            <p className="ag-medium-sm text-foreground mb-1">Aigon Mechatronics Pvt. Ltd.</p>
+            <p className="ag-normal-sm text-muted-foreground mb-5">
               165-A, Khadi Bhavan Road, Vadayambady,<br />
               Kunnathunadu, Ernakulam,<br />
               Kerala, India – 682308
             </p>
-            <p className="text-sm font-semibold text-foreground mb-2">Contact</p>
-            <div className="text-xs text-muted-foreground space-y-1 mb-5">
-              <p><a href="tel:+917111853910" className="hover:text-primary transition-colors">+91-7111 85391</a></p>
-              <p><a href="tel:+918301860501" className="hover:text-primary transition-colors">+91-8301 860 501</a></p>
-              <p><a href="tel:+919745601363" className="hover:text-primary transition-colors">+91-9745 601 363</a></p>
+            <p className="ag-medium-sm text-foreground mb-2">Contact</p>
+            <div className="space-y-1 mb-5">
+              <p><a href="tel:+917111853910" className="ag-normal-sm text-muted-foreground hover:font-medium hover:text-primary transition-colors">+91-7111 85391</a></p>
+              <p><a href="tel:+918301860501" className="ag-normal-sm text-muted-foreground hover:font-medium hover:text-primary transition-colors">+91-8301 860 501</a></p>
+              <p><a href="tel:+919745601363" className="ag-normal-sm text-muted-foreground hover:font-medium hover:text-primary transition-colors">+91-9745 601 363</a></p>
             </div>
-            <p className="text-sm font-semibold text-foreground mb-2">Email</p>
-            <a href="mailto:service@aigon.in" className="text-xs text-primary hover:underline">
+            <p className="ag-medium-sm text-foreground mb-2">Email</p>
+            <a href="mailto:service@aigon.in" className="ag-normal-sm text-muted-foreground hover:font-medium hover:text-primary transition-colors">
               service@aigon.in
             </a>
           </address>
@@ -83,7 +83,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-8">
-          <p className="text-xs text-muted-foreground">Aigon © 2025. All Rights Reserved.</p>
+          <p className="ag-normal-sm text-muted-foreground">Aigon © 2025. All Rights Reserved.</p>
 
           <div className="flex items-center gap-5">
             {socialIcons.map((s) => (

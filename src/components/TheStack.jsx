@@ -8,18 +8,18 @@ export default function TheStack() {
 
           {/* Left: Content — second on mobile, first on md+ */}
           <div className="order-2 md:order-1" data-aos="fade-right">
-            <p className="text-xs font-bold text-primary tracking-widest uppercase mb-5">THE STACK</p>
+            <p className="ag-semi-bold text-primary mb-5">THE STACK</p>
 
             {/* h1: 60px / 60px — large bold display */}
-            <h1 className="text-foreground mb-5">
+            <h2 className="ag-h2 text-foreground mb-5">
               Wind. Solar.<br />Intelligence.
-            </h1>
+            </h2>
 
             <p className="text-muted-foreground leading-relaxed mb-8 text-sm md:text-base">
               Automated Wind-Solar Hybrid systems for real world.
             </p>
 
-            <button className="px-6 py-3 border border-foreground text-foreground text-sm font-semibold rounded-full hover:border-primary hover:text-primary transition-colors">
+            <button className="px-6 py-3 border border-border text-foreground ag-base-medium rounded-full hover:border-primary hover:text-primary btn-outline">
               Learn more
             </button>
           </div>

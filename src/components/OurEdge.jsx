@@ -28,9 +28,9 @@ export default function OurEdge() {
 
         {/* Header */}
         <div className="text-center mb-16" data-aos="fade-up">
-          <p className="text-xs font-bold text-primary tracking-widest uppercase mb-4">OUR EDGE</p>
+          <p className="ag-semi-bold text-primary mb-4">OUR EDGE</p>
           {/* h2: 48px / 48px */}
-          <h2 className="text-slate-800 mb-4">Smarter Energy, by Design</h2>
+          <h3 className="ag-h3 text-muted-foreground mb-4">Smarter Energy, by Design</h3>
           <p className="text-slate-500 max-w-md mx-auto text-sm md:text-base">
             Automated hybrid wind systems for real world energy efficient solutions.
           </p>
@@ -47,8 +47,8 @@ export default function OurEdge() {
                 {edge.num}
               </div>
               {/* h5: 24px / 32px */}
-              <h5 className="text-slate-800 mb-3 whitespace-pre-line">{edge.title}</h5>
-              <p className="text-sm text-slate-500 leading-relaxed">{edge.desc}</p>
+              <p className="ag-semi-bold-lg text-foreground mb-3 whitespace-pre-line">{edge.title}</p>
+              <p className="ag-normal-base text-muted-foreground">{edge.desc}</p>
             </div>
           ))}
         </div>

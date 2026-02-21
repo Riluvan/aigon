@@ -18,7 +18,10 @@
 /* ── Base reset ─────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 
 body {
   margin: 0;
@@ -33,6 +36,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-width: 320px;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -42,9 +46,29 @@ h1, h2, h3, h4, h5, h6 {
 /* ── Primary gradient button helper ─────────── */
 .btn-gradient {
   background: var(--gradient-primary);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 .btn-gradient:hover {
   background: linear-gradient(135deg, #005a94 0%, #006fbd 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 131, 212, 0.32);
+}
+.btn-gradient:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* ── Outline button helper ───────────────────── */
+.btn-outline {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.btn-outline:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 131, 212, 0.14);
+}
+.btn-outline:active {
+  transform: translateY(0);
+  box-shadow: none;
 }
 
 /* ══════════════════════════════════════════════
@@ -111,15 +135,108 @@ h5 {
 }
 
 /* ── Aigon typography helpers ────────────────── */
+.ag-h1 {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.ag-h2 {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.ag-h3 {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 700;
+}
+
+.ag-h4 {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 600;
+}
+
 .ag-h5 {
-  font-family: 'DM Sans', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 24px;
   line-height: 32px;
   font-weight: 600;
 }
 
+.ag-medium {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.ag-base-medium {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.ag-semi-bold {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.ag-semi-bold-lg {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 600;
+}
+
+.ag-medium-sm {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.ag-normal-sm {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.ag-normal-base {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.ag-normal {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+.ag-normal-lg {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
 /* ── Button resets ───────────────────────────── */
-button { cursor: pointer; border: none; background: none; }
+button { cursor: pointer; background: none; }
 
 /* ── Link resets ─────────────────────────────── */
 a { text-decoration: none; }

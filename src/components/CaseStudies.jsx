@@ -63,7 +63,7 @@ export default function CaseStudies() {
 
           {/* Right: Content */}
           <div data-aos="fade-left" data-aos-delay="150">
-            <p className="text-xs font-bold text-primary tracking-widest uppercase mb-4">CASE STUDIES</p>
+            <p className="ag-semi-bold text-primary mb-4">CASE STUDIES</p>
 
             {/* Dots */}
             <div className="flex items-center gap-2 mb-6" role="tablist" aria-label="Case studies">
@@ -82,13 +82,13 @@ export default function CaseStudies() {
             </div>
 
             {/* h2: 48px / 48px */}
-            <h2 className="text-foreground mb-4">{study.title}</h2>
+            <h2 className="ag-h2 text-foreground mb-4">{study.title}</h2>
 
             <p className="text-muted-foreground leading-relaxed mb-8 text-sm md:text-base">
               {study.desc}
             </p>
 
-            <button className="px-6 py-3 border border-foreground text-foreground text-sm font-semibold rounded-full hover:border-primary hover:text-primary transition-colors">
+            <button className="px-6 py-3 border border-border text-foreground ag-base-medium rounded-full hover:border-primary hover:text-primary btn-outline">
               Learn more
             </button>
           </div>

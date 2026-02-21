@@ -5,7 +5,7 @@ import arrowDown from '../assets/arrow-down.svg'
 export default function Hero() {
   return (
     <section
-      className="relative min-h-screen overflow-hidden pt-16"
+      className="relative h-screen md:min-h-screen overflow-hidden pt-16"
       aria-label="Hero — Distributed Clean Power"
     >
       {/* Soft blue radial glow top-right */}
@@ -19,7 +19,7 @@ export default function Hero() {
       />
 
       {/* Layout wrapper — column on mobile, row on md+ */}
-      <div className="flex flex-col md:flex-row md:items-center md:min-h-[calc(100vh-4rem)]">
+      <div className="flex flex-col h-full md:flex-row md:items-center md:min-h-[calc(100vh-4rem)]">
 
         {/* Mobile turbine — top, only below md */}
         <div
@@ -53,22 +53,22 @@ export default function Hero() {
         {/* Text content */}
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10 w-full py-10 md:py-20 lg:py-0">
           <div className="w-full md:w-1/2 z-10" data-aos="fade-right" data-aos-delay="100">
-            <p className="ag-h5 text-muted-foreground mb-3">
+            <h5 className="ag-h5 text-foreground mb-3">
               Engineering the future of
-            </p>
+            </h5>
 
-            <h1 className="mb-6 bg-gradient-to-br from-[#0068AB] to-[#0083D4] bg-clip-text text-transparent">
+            <h1 className="ag-h1 mb-6 bg-gradient-to-br from-[#0068AB] to-[#0083D4] bg-clip-text text-transparent">
               Distributed Clean<br />Power.
             </h1>
 
-            <p className="text-base lg:text-lg text-muted-foreground leading-relaxed mb-10 max-w-md">
+            <p className="ag-normal-lg text-muted-foreground mb-10 max-w-md">
               Automated micro hybrid wind energy systems engineered for
               low-wind, grid-interactive, and off-grid environments.
             </p>
 
             <a
               href="#products"
-              className="inline-flex items-center gap-2.5 px-7 py-3.5 btn-gradient text-white font-semibold rounded-full text-sm transition-all"
+              className="inline-flex items-center gap-2.5 px-7 py-3.5 btn-gradient text-white ag-medium rounded-full transition-all"
             >
               Explore
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
