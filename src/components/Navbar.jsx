@@ -36,11 +36,6 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // Prevent body scroll when menu is open
-  useEffect(() => {
-    document.body.style.overflow = menuOpen ? 'hidden' : ''
-    return () => { document.body.style.overflow = '' }
-  }, [menuOpen])
 
   return (
     <>
@@ -121,7 +116,7 @@ export default function Navbar() {
 
       {/* Slide-in drawer */}
       <div
-        className={`fixed top-0 right-0 z-50 h-full w-[300px] bg-white shadow-2xl flex flex-col transition-transform duration-300 ease-in-out md:hidden ${
+        className={`fixed top-0 right-0 z-50 h-full w-[300px] bg-white shadow-2xl flex flex-col transition-transform duration-300 ease-in-out md:hidden overflow-hidden ${
           menuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
