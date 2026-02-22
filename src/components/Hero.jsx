@@ -95,7 +95,7 @@ export default function Hero() {
 
       {/* Tablet + Desktop turbine — absolute right, vertically centered, md and up */}
       <div
-        className="hidden md:block absolute right-0 z-0 md:top-[20%] lg:top-[15%]"
+        className="hidden md:block absolute right-0 z-0 md:top-[20%] lg:top-[12%]"
         data-aos="fade-left"
         data-aos-delay="200"
       >
