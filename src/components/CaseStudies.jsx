@@ -1,25 +1,25 @@
 import { useState, useEffect, useRef } from 'react'
-import img1 from '../assets/Rectangle.png'
-import img2 from '../assets/Rectangle (1).png'
-import img3 from '../assets/service-image10 1.png'
+import imgInfosys from '../assets/case-infosys.webp'
+import imgIIT from '../assets/case-iit.webp'
+import imgDST from '../assets/case-dst.webp'
 
 const cases = [
   {
     title: 'Infosys Grid-Direct Turbine',
     desc: 'Automated hybrid wind systems for real world energy efficient solutions.',
-    img: img1,
+    img: imgInfosys,
     imgAlt: 'Infosys grid-direct wind turbine installation',
   },
   {
     title: 'IIT Palakkad Wind System',
     desc: 'A campus-scale wind energy deployment supporting clean power research and education infrastructure.',
-    img: img2,
+    img: imgIIT,
     imgAlt: 'IIT Palakkad campus wind system',
   },
   {
     title: 'DST Micro-Grid Project',
     desc: 'Department of Science & Technology funded rural micro-grid combining wind and solar for off-grid electrification.',
-    img: img3,
+    img: imgDST,
     imgAlt: 'DST micro-grid project',
   },
 ]

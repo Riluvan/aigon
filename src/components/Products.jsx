@@ -1,7 +1,9 @@
 import { useState, useEffect, useRef } from 'react'
 import img1 from '../assets/Rectangle.png'
-import img2 from '../assets/Rectangle (1).png'
-import img3 from '../assets/service-image10 1.png'
+import imgControllers from '../assets/product-hybrid-controllers.webp'
+import imgSolar from '../assets/product-solar-modules.webp'
+import imgLoggers from '../assets/product-data-loggers.webp'
+import imgGrid from '../assets/product-grid-interactive.webp'
 
 const products = [
   {
@@ -13,25 +15,25 @@ const products = [
   {
     title: 'Hybrid Controllers',
     desc: 'Universal hybrid charge controllers that manage multiple energy sources with intelligent MPPT algorithms for maximum efficiency.',
-    img: img2,
+    img: imgControllers,
     imgAlt: 'Hybrid charge controllers',
   },
   {
     title: 'Solar Modules',
     desc: 'High-efficiency mono-crystalline solar modules designed for integration with wind systems in hybrid configurations.',
-    img: img3,
+    img: imgSolar,
     imgAlt: 'Solar modules',
   },
   {
     title: 'Data Loggers',
     desc: 'AI-enabled data logging systems that provide real-time monitoring, analytics, and remote management for energy installations.',
-    img: img1,
+    img: imgLoggers,
     imgAlt: 'Data loggers for energy monitoring',
   },
   {
     title: 'Grid-Interactive Systems',
     desc: 'Complete grid-direct solutions combining wind turbines with grid-tie inverters for seamless power export and net metering.',
-    img: img2,
+    img: imgGrid,
     imgAlt: 'Grid-interactive wind-solar system',
   },
 ]
