@@ -35,7 +35,7 @@ const track = [...partners, ...partners]
 
 export default function ClientLogos() {
   return (
-    <section className="bg-white/90 py-12 overflow-hidden" aria-label="Our partners and clients" data-aos="fade-up">
+    <section className="py-12 overflow-hidden" aria-label="Our partners and clients" data-aos="fade-up">
       <div className="marquee-track flex gap-4 w-max">
         {track.map((p, i) => (
           <article

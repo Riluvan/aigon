@@ -59,7 +59,7 @@ export default function Products() {
   }
 
   return (
-    <section id="products" className="bg-white/90 py-16">
+    <section id="products" className="bg-white py-12">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
@@ -75,7 +75,7 @@ export default function Products() {
 
           {/* Content */}
           <div data-aos="fade-left" data-aos-delay="150">
-            <p className="ag-semi-bold text-primary mb-4">PRODUCTS</p>
+            <p className="ag-semi-bold text-primary mb-6">PRODUCTS</p>
 
             {/* Dots */}
             <div className="flex items-center gap-2 mb-6" role="tablist" aria-label="Products">
@@ -96,7 +96,7 @@ export default function Products() {
             {/* h2: 48px / 48px */}
             <h2 className="ag-h2 text-foreground mb-4">{product.title}</h2>
 
-            <p className="text-muted-foreground leading-relaxed mb-8 text-sm md:text-base">
+            <p className="text-muted-foreground leading-relaxed mb-6 text-sm md:text-base">
               {product.desc}
             </p>
 

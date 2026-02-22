@@ -74,7 +74,7 @@ const engineeringFeatures = [
 
 export default function Features() {
   return (
-    <section id="features" className="bg-muted/90 py-14">
+    <section id="features" className="bg-muted pt-14 pb-12">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 space-y-14">
 
         {/* Feature Cards */}
@@ -91,9 +91,9 @@ export default function Features() {
                 {card.icon}
               </div>
 
-              <p className="ag-h5 text-foreground whitespace-pre-line">
+              <h5 className="ag-h5 text-foreground whitespace-pre-line">
                 {card.title}
-              </p>
+              </h5>
 
               {/* Description — collapses to 0 height, expands only on THIS card's hover */}
               <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-300 ease-out">

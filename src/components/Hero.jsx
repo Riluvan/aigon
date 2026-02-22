@@ -1,11 +1,12 @@
 import turbineLeg from '../assets/turbain-leg.png'
 import turbineFan from '../assets/turbain-fan.png'
 import arrowDown from '../assets/arrow-down.svg'
+import arrowWhite from '../assets/arrow-white.svg'
 
 export default function Hero() {
   return (
     <section
-      className="relative h-screen md:min-h-screen overflow-hidden pt-16"
+      className="relative md:h-screen overflow-hidden pt-16"
       aria-label="Hero — Distributed Clean Power"
     >
       {/* Soft blue radial glow top-right */}
@@ -53,41 +54,43 @@ export default function Hero() {
         {/* Text content */}
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10 w-full py-10 md:py-20 lg:py-0">
           <div className="w-full md:w-1/2 z-10" data-aos="fade-right" data-aos-delay="100">
-            <h5 className="ag-h5 text-foreground mb-3">
+            <h5 className="ag-h5 text-foreground mb-4">
               Engineering the future of
             </h5>
 
-            <h1 className="ag-h1 mb-6 bg-gradient-to-br from-[#0068AB] to-[#0083D4] bg-clip-text text-transparent">
+            <h1 className="ag-h1 mb-4 bg-gradient-to-br from-[#0068AB] to-[#0083D4] bg-clip-text text-transparent">
               Distributed Clean<br />Power.
             </h1>
 
-            <p className="ag-normal-lg text-muted-foreground mb-10 max-w-md">
+            <p className="ag-normal-lg text-muted-foreground mb-6 max-w-[32rem]">
               Automated micro hybrid wind energy systems engineered for
               low-wind, grid-interactive, and off-grid environments.
             </p>
 
             <a
               href="#products"
-              className="inline-flex items-center gap-2.5 px-7 py-3.5 btn-gradient text-white ag-medium rounded-full transition-all"
+              className="group inline-flex items-center gap-2.5 px-7 py-3.5 btn-gradient text-white ag-medium rounded-full transition-all"
             >
               Explore
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
+              <img src={arrowWhite} alt="" aria-hidden="true" className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
             </a>
 
-            <div className="mt-14">
-              <a
-                href="#features"
-                aria-label="Scroll to features"
-                className="flex items-center w-11 h-11 transition-all group"
-              >
-                <img src={arrowDown} alt="" aria-hidden="true" />
-              </a>
-            </div>
           </div>
         </div>
 
+      </div>
+
+      {/* Scroll arrow — always anchored 48px from bottom, aligned to content container */}
+      <div className="absolute bottom-12 left-0 right-0 z-10 pointer-events-none">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <a
+            href="#features"
+            aria-label="Scroll to features"
+            className="arrow-scroll-wrap flex items-center justify-center w-11 h-11 overflow-hidden pointer-events-auto"
+          >
+            <img src={arrowDown} alt="" aria-hidden="true" className="arrow-scroll" />
+          </a>
+        </div>
       </div>
 
       {/* Tablet + Desktop turbine — absolute right, vertically centered, md and up */}

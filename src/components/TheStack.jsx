@@ -2,20 +2,20 @@ import stackImg from '../assets/Rectangle (1).png'
 
 export default function TheStack() {
   return (
-    <section className="bg-white/90 py-16">
+    <section className="bg-white py-12">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
           {/* Left: Content — second on mobile, first on md+ */}
           <div className="order-2 md:order-1" data-aos="fade-right">
-            <p className="ag-semi-bold text-primary mb-5">THE STACK</p>
+            <p className="ag-semi-bold text-primary mb-6">THE STACK</p>
 
             {/* h1: 60px / 60px — large bold display */}
-            <h2 className="ag-h2 text-foreground mb-5">
+            <h2 className="ag-h2 text-foreground mb-4">
               Wind. Solar.<br />Intelligence.
             </h2>
 
-            <p className="text-muted-foreground leading-relaxed mb-8 text-sm md:text-base">
+            <p className="text-muted-foreground leading-relaxed mb-6 text-sm md:text-base">
               Automated Wind-Solar Hybrid systems for real world.
             </p>
 
