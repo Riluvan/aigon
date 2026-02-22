@@ -59,7 +59,7 @@ export default function Hero() {
             </h5>
 
             <h1 className="ag-h1 mb-4 bg-gradient-to-br from-[#0068AB] to-[#0083D4] bg-clip-text text-transparent">
-              Distributed Clean<br />Power.
+              Distributed Clean <br className="hidden md:block" />Power.
             </h1>
 
             <p className="ag-normal-lg text-muted-foreground mb-6 max-w-[32rem]">
@@ -81,7 +81,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll arrow — always anchored 48px from bottom, aligned to content container */}
-      <div className="absolute bottom-12 left-0 right-0 z-10 pointer-events-none">
+      <div className="md:absolute bottom-12 left-0 right-0 z-10 pointer-events-none mb-3 md:mb-0" data-aos="fade-up" data-aos-delay="300">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <a
             href="#features"
