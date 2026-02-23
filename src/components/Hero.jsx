@@ -35,6 +35,7 @@ export default function Hero() {
               className="absolute bottom-0 w-[14px] h-[148px] object-fill"
               style={{ left: '43.5%' }}
               loading="eager"
+              fetchPriority="high"
             />
             <div
               className="absolute z-10"
@@ -46,6 +47,7 @@ export default function Hero() {
                 aria-hidden="true"
                 className="fan-spin block w-[264px] h-[264px]"
                 loading="eager"
+                fetchPriority="high"
               />
             </div>
           </div>
@@ -108,6 +110,7 @@ export default function Hero() {
             className="absolute bottom-0 object-fill md:w-[20px] md:h-[222px] lg:w-[32px] lg:h-[360px]"
             style={{ left: '43.5%' }}
             loading="eager"
+            fetchPriority="high"
           />
 
           {/* Fan */}
@@ -121,6 +124,7 @@ export default function Hero() {
               aria-hidden="true"
               className="fan-spin block md:w-[396px] md:h-[396px] lg:w-[640px] lg:h-[640px]"
               loading="eager"
+              fetchPriority="high"
             />
           </div>
 

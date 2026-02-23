@@ -1,7 +1,6 @@
 import { useEffect } from 'react'
 import { HelmetProvider, Helmet } from 'react-helmet-async'
 import AOS from 'aos'
-import 'aos/dist/aos.css'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Features from './components/Features'

@@ -284,6 +284,7 @@ a { text-decoration: none; }
 .fan-spin {
   animation: spin-fan 6s linear infinite;
   transform-origin: center center;
+  will-change: transform;
 }
 
 /* ── Scroll arrow loop animation ────────────── */
