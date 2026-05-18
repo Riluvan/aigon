@@ -2,7 +2,7 @@ import stackImg from '../assets/Rectangle (1).png'
 
 export default function TheStack() {
   return (
-    <section className="bg-white py-12">
+    <section className="bg-white py-12 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 

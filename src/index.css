@@ -129,6 +129,14 @@ h5 {
   }
 }
 
+/* Inner pages — override body background on desktop */
+@media (min-width: 1024px) {
+  body.inner-page {
+    background-image: url('./assets/Top-BG-inner.png');
+    background-size: contain;
+  }
+}
+
 /* Responsive typography */
 /* Tablet: 768px – 1024px */
 @media (max-width: 1024px) {

@@ -74,7 +74,7 @@ const engineeringFeatures = [
 
 export default function Features() {
   return (
-    <section id="features" className="bg-muted pt-14 pb-12">
+    <section id="features" className="bg-muted pt-14 pb-12 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 space-y-14">
 
         {/* Feature Cards */}

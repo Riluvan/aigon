@@ -1,12 +1,13 @@
 import { useState, useEffect, useRef } from 'react'
+import { NavLink, Link } from 'react-router-dom'
 import logo from '../assets/Logo.png'
 
 const navLinks = [
-  { label: 'Home',     href: '#'          },
-  { label: 'Products', href: '#products'  },
-  { label: 'Services', href: '#services'  },
-  { label: 'About',    href: '#about'     },
-  { label: 'Connect',  href: '#connect'   },
+  { label: 'Home',     to: '/'         },
+  { label: 'About',    to: '/about'    },
+  { label: 'Products', to: '/products' },
+  { label: 'Services', to: '/services' },
+  { label: 'Contact',  to: '/contact'  },
 ]
 
 export default function Navbar() {
@@ -19,9 +20,7 @@ export default function Navbar() {
     const onScroll = () => {
       const currentY = window.scrollY
       const isAtTop = currentY <= 0
-
       setAtTop(isAtTop)
-
       if (isAtTop) {
         setVisible(true)
       } else if (currentY > lastY.current) {
@@ -35,7 +34,6 @@ export default function Navbar() {
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
-
 
   return (
     <>
@@ -52,48 +50,46 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-16">
 
             {/* Logo */}
-            <a href="#" aria-label="Aigon — Home" className="flex-shrink-0">
+            <Link to="/" aria-label="Aigon — Home" className="flex-shrink-0">
               <img src={logo} alt="Aigon" className="h-7 w-auto" />
-            </a>
+            </Link>
 
             {/* Desktop nav */}
             <nav className="hidden md:flex items-center gap-8" aria-label="Main navigation">
               {navLinks.map((link) => (
-                <a
+                <NavLink
                   key={link.label}
-                  href={link.href}
-                  className={`transition-colors hover:text-foreground ${
-                    link.label === 'Home'
-                      ? 'ag-semi-bold text-foreground relative after:absolute after:bottom-[-6px] after:left-0 after:right-0 after:h-0.5 after:bg-primary after:rounded-full'
-                      : 'ag-medium text-muted-foreground'
-                  }`}
+                  to={link.to}
+                  end={link.to === '/'}
+                  className={({ isActive }) =>
+                    `transition-colors hover:text-foreground ${
+                      isActive
+                        ? 'ag-semi-bold text-foreground relative after:absolute after:bottom-[-6px] after:left-0 after:right-0 after:h-0.5 after:bg-primary after:rounded-full'
+                        : 'ag-medium text-muted-foreground'
+                    }`
+                  }
                 >
                   {link.label}
-                </a>
+                </NavLink>
               ))}
             </nav>
 
             {/* CTA */}
-            <a
-              href="#"
+            <Link
+              to="/try-it-yourself"
               className="hidden md:inline-flex items-center px-5 py-2.5 btn-gradient text-white ag-medium-sm rounded-full"
             >
               Try it yourself
-            </a>
+            </Link>
 
-            {/* Mobile toggle — hamburger / X */}
+            {/* Mobile toggle */}
             <button
               className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors text-foreground"
               aria-label={menuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={menuOpen}
               onClick={() => setMenuOpen((v) => !v)}
             >
-              <svg
-                className="w-5 h-5 transition-all duration-300"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
+              <svg className="w-5 h-5 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 {menuOpen ? (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 ) : (
@@ -137,30 +133,33 @@ export default function Navbar() {
         {/* Nav links */}
         <nav className="flex flex-col px-6 py-6 gap-1 flex-1" aria-label="Mobile navigation">
           {navLinks.map((link) => (
-            <a
+            <NavLink
               key={link.label}
-              href={link.href}
+              to={link.to}
+              end={link.to === '/'}
               onClick={() => setMenuOpen(false)}
-              className={`w-full py-3 px-4 rounded-xl transition-colors ${
-                link.label === 'Home'
-                  ? 'ag-semi-bold text-primary bg-primary/5'
-                  : 'ag-medium text-muted-foreground hover:text-foreground hover:bg-muted'
-              }`}
+              className={({ isActive }) =>
+                `w-full py-3 px-4 rounded-xl transition-colors ${
+                  isActive
+                    ? 'ag-semi-bold text-primary bg-primary/5'
+                    : 'ag-medium text-muted-foreground hover:text-foreground hover:bg-muted'
+                }`
+              }
             >
               {link.label}
-            </a>
+            </NavLink>
           ))}
         </nav>
 
         {/* CTA */}
         <div className="px-6 pb-8 flex-shrink-0">
-          <a
-            href="#"
+          <Link
+            to="/try-it-yourself"
             onClick={() => setMenuOpen(false)}
             className="flex items-center justify-center w-full px-5 py-3 btn-gradient text-white ag-medium-sm rounded-full"
           >
             Try it yourself
-          </a>
+          </Link>
         </div>
       </div>
     </>

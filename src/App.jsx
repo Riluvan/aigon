@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import { HelmetProvider, Helmet } from 'react-helmet-async'
 import AOS from 'aos'
 import Navbar from './components/Navbar'
@@ -12,15 +13,21 @@ import ClientLogos from './components/ClientLogos'
 import CTA from './components/CTA'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
+import About from './pages/About'
+import ProductsPage from './pages/Products'
+import Services from './pages/Services'
+import Contact from './pages/Contact'
+import TryItYourself from './pages/TryItYourself'
 
-export default function App() {
-  useEffect(() => {
-    AOS.init({ duration: 700, once: true, easing: 'ease-out-cubic', offset: 60 })
-  }, [])
+function ScrollReset() {
+  const { pathname } = useLocation()
+  useEffect(() => { window.scrollTo(0, 0) }, [pathname])
+  return null
+}
 
+function Home() {
   return (
-    <HelmetProvider>
-      {/* Page-level SEO (supplements index.html meta) */}
+    <>
       <Helmet>
         <title>Aigon – Engineering the Future of Distributed Clean Power</title>
         <meta
@@ -29,7 +36,6 @@ export default function App() {
         />
       </Helmet>
 
-      {/* Skip-to-content for accessibility */}
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-white focus:rounded-lg"
@@ -52,6 +58,28 @@ export default function App() {
 
       <Footer />
       <ScrollToTop />
+    </>
+  )
+}
+
+export default function App() {
+  useEffect(() => {
+    AOS.init({ duration: 700, once: true, easing: 'ease-out-cubic', offset: 60 })
+  }, [])
+
+  return (
+    <HelmetProvider>
+      <BrowserRouter>
+        <ScrollReset />
+        <Routes>
+          <Route path="/"         element={<Home />}         />
+          <Route path="/about"    element={<About />}        />
+          <Route path="/products" element={<ProductsPage />} />
+          <Route path="/services" element={<Services />}     />
+          <Route path="/contact"        element={<Contact />}        />
+          <Route path="/try-it-yourself" element={<TryItYourself />} />
+        </Routes>
+      </BrowserRouter>
     </HelmetProvider>
   )
 }
