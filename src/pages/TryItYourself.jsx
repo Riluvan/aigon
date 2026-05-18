@@ -267,11 +267,6 @@ export default function TryItYourself() {
                   />
                 </div>
 
-                {/* Coming soon notice */}
-                <div className="rounded-xl bg-primary/5 border border-primary/20 px-5 py-4">
-                  <p className="ag-medium-sm text-primary">This feature is coming soon — AI-powered system sizing will be available shortly. Your submission will be reviewed manually by our team in the meantime.</p>
-                </div>
-
                 {error && <p className="ag-normal-sm text-red-500">{error}</p>}
 
                 <button
