@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async'
 import { sendContactEmail } from '../lib/emailjs'
 import Navbar from '../components/Navbar'
 import PageHero from '../components/PageHero'
-import PartnerLogos from '../components/PartnerLogos'
+import ClientLogos from '../components/ClientLogos'
 import PageCTA from '../components/PageCTA'
 import PageFooter from '../components/PageFooter'
 import iitLogo from '../assets/iitplogo 1.png'
@@ -212,7 +212,7 @@ export default function Contact() {
           </div>
         </section>
 
-        <PartnerLogos />
+        <ClientLogos />
         <PageCTA />
       </main>
 

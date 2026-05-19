@@ -1,36 +1,35 @@
-import iitLogo     from '../assets/iitplogo 1.png'
-import dstLogo     from '../assets/dst-logo1 1.png'
-import infosysLogo from '../assets/Infosys_logo.svg 1.png'
-import indiacsrLogo from '../assets/INDIA-CSR-LOGO 2.png'
+import iitLogo   from '../assets/IIT Png.png'
+import dstLogo   from '../assets/DST Png.png'
+import dpiitLogo from '../assets/DPIIT Png.png'
+import ksmLogo   from '../assets/SM Png.png'
 
 const partners = [
   {
     id: 'iit',
     logo: iitLogo,
-    alt: 'Indian Institute of Technology Palakkad',
-    desc: 'Automated hybrid wind systems for real world energy efficient solutions.',
+    alt: 'IIT Palakkad Technology iHub Foundation',
+    desc: 'IIT Palakkad Technology I-Hub Foundation, IIT Palakkad, Palakkad, Kerala – 678623',
   },
   {
     id: 'dst',
     logo: dstLogo,
-    alt: 'Department of Science & Technology',
-    desc: 'Automated hybrid wind systems for real world energy efficient solutions.',
+    alt: 'Department of Science and Technology',
+    desc: 'Department of Science and Technology, Govt of India, New Delhi-110 016.',
   },
   {
-    id: 'infosys',
-    logo: infosysLogo,
-    alt: 'Infosys',
-    desc: 'Automated hybrid wind systems for real world energy efficient solutions.',
+    id: 'dpiit',
+    logo: dpiitLogo,
+    alt: 'DPIIT – Department for Promotion of Industry and Internal Trade',
+    desc: 'Department for Promotion of Industry and Internal Trade, Ministry of Commerce, Government of India',
   },
   {
-    id: 'indiacsr',
-    logo: indiacsrLogo,
-    alt: 'IndiaCSR — Corporate Sustainability & Responsibility',
-    desc: 'Automated hybrid wind systems for real world energy efficient solutions.',
+    id: 'ksm',
+    logo: ksmLogo,
+    alt: 'Kerala Startup Mission',
+    desc: 'Kerala Startup Mission, Dept of IT, Govt of Kerala',
   },
 ]
 
-/* Duplicate for seamless infinite loop */
 const track = [...partners, ...partners]
 
 export default function ClientLogos() {
@@ -42,15 +41,15 @@ export default function ClientLogos() {
             key={`${p.id}-${i}`}
             className="bg-white rounded-2xl p-6 border border-border shadow-sm w-72 shrink-0"
           >
-            <div className="mb-4 h-10 flex items-center">
+            <div className="mb-4 h-12 flex items-center">
               <img
                 src={p.logo}
                 alt={p.alt}
-                className="h-8 w-auto object-contain"
+                className="h-10 w-auto max-w-[140px] object-contain"
                 loading="lazy"
               />
             </div>
-            <p className="text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
+            <p className="ag-normal-sm text-muted-foreground leading-relaxed">{p.desc}</p>
           </article>
         ))}
       </div>

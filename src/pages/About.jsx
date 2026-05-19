@@ -1,8 +1,8 @@
 import { Helmet } from 'react-helmet-async'
-import aboutBanner from '../assets/about-hero-banner.jpg'
+import aboutBanner from '../assets/about-hero-banner.webp'
 import Navbar from '../components/Navbar'
 import PageHero from '../components/PageHero'
-import PartnerLogos from '../components/PartnerLogos'
+import ClientLogos from '../components/ClientLogos'
 import PageCTA from '../components/PageCTA'
 import PageFooter from '../components/PageFooter'
 import School from '../assets/School.svg'
@@ -188,7 +188,7 @@ export default function About() {
           </div>
         </section>
 
-        <PartnerLogos />
+        <ClientLogos />
         <PageCTA />
       </main>
 

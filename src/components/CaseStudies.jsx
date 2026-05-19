@@ -1,26 +1,26 @@
 import { useState, useEffect, useRef } from 'react'
-import imgInfosys from '../assets/case-infosys.webp'
-import imgIIT from '../assets/case-iit.webp'
-import imgDST from '../assets/case-dst.webp'
+import imgVagamon  from '../assets/Slider_02.webp'
+import imgInfosys  from '../assets/Pic_02.webp'
+import imgSacredH  from '../assets/SH02.webp'
 
 const cases = [
   {
-    title: 'Infosys Grid-Direct Turbine',
-    desc: 'Automated hybrid wind systems for real world energy efficient solutions.',
+    title: '100% Off-Grid Hybrid Microgrid with Wind-Solar-Storage-DG',
+    desc: 'Located at Mountain Villa Resorts, Vagamon, Kerala — demonstrates a scalable off-grid microgrid model for remote resorts & institutions. Integrates wind, solar, storage, and DG into a single resilient system. Evaluates continuous 24-hour operation under real site conditions & monitors wind/solar generation, battery SOC, load demand, and DG run-hours.',
+    img: imgVagamon,
+    imgAlt: 'Off-grid hybrid microgrid at Mountain Villa Resorts, Vagamon, Kerala',
+  },
+  {
+    title: 'Grid-Direct Standalone Wind Turbine Project at INFOSYS Ltd, Trivandrum',
+    desc: 'Demonstrates viable grid-interactive small wind turbine for commercial campuses. Approved by CEIG, Govt. of Kerala. Monitors energy export to grid under real wind & grid conditions with battery-less architecture.',
     img: imgInfosys,
-    imgAlt: 'Infosys grid-direct wind turbine installation',
+    imgAlt: 'Grid-direct standalone wind turbine at Infosys Trivandrum',
   },
   {
-    title: 'IIT Palakkad Wind System',
-    desc: 'A campus-scale wind energy deployment supporting clean power research and education infrastructure.',
-    img: imgIIT,
-    imgAlt: 'IIT Palakkad campus wind system',
-  },
-  {
-    title: 'DST Micro-Grid Project',
-    desc: 'Department of Science & Technology funded rural micro-grid combining wind and solar for off-grid electrification.',
-    img: imgDST,
-    imgAlt: 'DST micro-grid project',
+    title: 'Parallel Wind Microgeneration Study',
+    desc: 'Located at Sacred Hearts College, Cochin, Kerala. Validates parallel small-wind integration in off-grid campus-friendly systems and generates rare local wind performance data for Kerala.',
+    img: imgSacredH,
+    imgAlt: 'Parallel wind microgeneration study at Sacred Hearts College, Cochin',
   },
 ]
 
@@ -83,8 +83,7 @@ export default function CaseStudies() {
               ))}
             </div>
 
-            {/* h2: 48px / 48px */}
-            <h2 className="ag-h2 text-foreground mb-4">{study.title}</h2>
+            <h3 className="ag-h3 text-foreground mb-4">{study.title}</h3>
 
             <p className="text-muted-foreground leading-relaxed mb-6 text-sm md:text-base">
               {study.desc}

@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async'
 import Navbar from '../components/Navbar'
 import PageHero from '../components/PageHero'
-import PartnerLogos from '../components/PartnerLogos'
+import ClientLogos from '../components/ClientLogos'
 import PageCTA from '../components/PageCTA'
 import PageFooter from '../components/PageFooter'
 import FanIcon from '../assets/Fan.svg'
@@ -21,11 +21,11 @@ import GavelIcon from '../assets/Gavel.svg'
 import BookUserIcon from '../assets/BookUser.svg'
 import LeafIcon from '../assets/Leaf.svg'
 import CircuitBoardIcon from '../assets/CircuitBoard.svg'
-import s1Img from '../assets/service-feasibility.jpg'
-import s2Img from '../assets/service-integrated.jpg'
-import s3Img from '../assets/service-collaborations.jpg'
-import s4Img from '../assets/service-ppa-mode.jpg'
-import s5Img from '../assets/service-re-consultancy.jpg'
+import s1Img from '../assets/service-feasibility.webp'
+import s2Img from '../assets/service-integrated.webp'
+import s3Img from '../assets/service-collaborations.webp'
+import s4Img from '../assets/service-ppa-mode.webp'
+import s5Img from '../assets/service-re-consultancy.webp'
 
 function BulletIcon() {
   return (
@@ -191,7 +191,7 @@ export default function Services() {
           </div>
         </section>
 
-        <PartnerLogos />
+        <ClientLogos />
         <PageCTA />
       </main>
 

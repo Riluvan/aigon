@@ -1,40 +1,28 @@
 import { useState, useEffect, useRef } from 'react'
-import img1 from '../assets/Rectangle.png'
-import imgControllers from '../assets/product-hybrid-controllers.webp'
-import imgSolar from '../assets/product-solar-modules.webp'
-import imgLoggers from '../assets/product-data-loggers.webp'
-import imgGrid from '../assets/product-grid-interactive.webp'
+import { Link } from 'react-router-dom'
+import windTurbineImg from '../assets/Wind Turbine.webp'
 
 const products = [
   {
-    title: 'Smart Wind Turbines',
-    desc: 'Compact horizontal and vertical axis turbines engineered for rooftop, campus, telecom, and industrial applications, with modular and recyclable construction.',
-    img: img1,
-    imgAlt: 'Smart wind turbines on a rooftop building',
+    subtitle: 'Small Wind Turbine – 1kW',
+    model: 'AGN-1K',
+    desc: 'Compact turbine engineered for low-wind coastal and rural environments. Hybrid-ready with 12/24/48/96V output. Start-up wind speed of just 1.8 m/s.',
+    img: windTurbineImg,
+    imgAlt: 'AGN-1K small wind turbine installation',
   },
   {
-    title: 'Hybrid Controllers',
-    desc: 'Universal hybrid charge controllers that manage multiple energy sources with intelligent MPPT algorithms for maximum efficiency.',
-    img: imgControllers,
-    imgAlt: 'Hybrid charge controllers',
+    subtitle: 'Compact Wind Turbine – 3kW',
+    model: 'AGN-3K',
+    desc: 'Versatile off-grid and on-grid turbine for institutions and commercial sites. Supports 48/96V and grid-tie configurations with hybrid-ready architecture.',
+    img: windTurbineImg,
+    imgAlt: 'AGN-3K compact wind turbine in field',
   },
   {
-    title: 'Solar Modules',
-    desc: 'High-efficiency mono-crystalline solar modules designed for integration with wind systems in hybrid configurations.',
-    img: imgSolar,
-    imgAlt: 'Solar modules',
-  },
-  {
-    title: 'Data Loggers',
-    desc: 'AI-enabled data logging systems that provide real-time monitoring, analytics, and remote management for energy installations.',
-    img: imgLoggers,
-    imgAlt: 'Data loggers for energy monitoring',
-  },
-  {
-    title: 'Grid-Interactive Systems',
-    desc: 'Complete grid-direct solutions combining wind turbines with grid-tie inverters for seamless power export and net metering.',
-    img: imgGrid,
-    imgAlt: 'Grid-interactive wind-solar system',
+    subtitle: 'Advanced Wind Turbine – 5kW',
+    model: 'AGN-5K',
+    desc: 'High-capacity turbine for industries, corporates, and large campuses. Delivers 5000W with 3 m blade length, supporting both off-grid and on-grid modes.',
+    img: windTurbineImg,
+    imgAlt: 'AGN-5K advanced wind turbine row',
   },
 ]
 
@@ -82,7 +70,7 @@ export default function Products() {
             <p className="ag-semi-bold text-primary mb-6">PRODUCTS</p>
 
             {/* Dots */}
-            <div className="flex items-center gap-2 mb-6" role="tablist" aria-label="Products">
+            <div className="flex items-center gap-2 mb-4" role="tablist" aria-label="Products">
               {products.map((_, i) => (
                 <button
                   key={i}
@@ -97,16 +85,19 @@ export default function Products() {
               ))}
             </div>
 
-            {/* h2: 48px / 48px */}
-            <h2 className="ag-h2 text-foreground mb-4">{product.title}</h2>
+            <h4 className="ag-h4 text-muted-foreground mb-1">{product.subtitle}</h4>
+            <h2 className="ag-h2 text-foreground mb-4">{product.model}</h2>
 
             <p className="text-muted-foreground leading-relaxed mb-6 text-sm md:text-base">
               {product.desc}
             </p>
 
-            <button className="px-6 py-3 border border-border text-foreground ag-base-medium rounded-full hover:border-primary hover:text-primary btn-outline">
+            <Link
+              to="/products"
+              className="px-6 py-3 border border-border text-foreground ag-base-medium rounded-full hover:border-primary hover:text-primary btn-outline"
+            >
               Learn more
-            </button>
+            </Link>
           </div>
         </div>
       </div>

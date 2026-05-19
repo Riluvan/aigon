@@ -1,21 +1,19 @@
 import { Helmet } from 'react-helmet-async'
 import Navbar from '../components/Navbar'
 import PageHero from '../components/PageHero'
-import PartnerLogos from '../components/PartnerLogos'
+import ClientLogos from '../components/ClientLogos'
 import PageCTA from '../components/PageCTA'
 import PageFooter from '../components/PageFooter'
 import CircleCheck from '../assets/CircleCheck.svg'
 import CircleMinus from '../assets/CircleMinus.svg'
-import agn1kImg from '../assets/product-agn1k.jpg'
-import agn3kImg from '../assets/product-agn3k.jpg'
-import agn5kImg from '../assets/product-agn5k.jpg'
+import windTurbineImg from '../assets/Wind Turbine.webp'
 
 const products = [
   {
     tag: 'PRODUCT • 1',
     subtitle: 'Small Wind Turbine – 1kW',
     model: 'AGN-1K',
-    img: agn1kImg,
+    img: windTurbineImg,
     imgAlt: 'AGN-1K small wind turbine installation',
     specs: [
       { label: 'Rated Power',              value: '1000W'        },
@@ -34,7 +32,7 @@ const products = [
     tag: 'PRODUCT • 2',
     subtitle: 'Compact Wind Turbine – 3kW',
     model: 'AGN-3K',
-    img: agn3kImg,
+    img: windTurbineImg,
     imgAlt: 'AGN-3K compact wind turbine in field',
     specs: [
       { label: 'Rated Power',              value: '3000W'            },
@@ -53,7 +51,7 @@ const products = [
     tag: 'PRODUCT • 3',
     subtitle: 'Advanced Wind Turbine – 5kW',
     model: 'AGN-5K',
-    img: agn5kImg,
+    img: windTurbineImg,
     imgAlt: 'AGN-5K advanced wind turbine row',
     specs: [
       { label: 'Rated Power',              value: '5000W'            },
@@ -208,7 +206,7 @@ export default function Products() {
           </div>
         </section>
 
-        <PartnerLogos />
+        <ClientLogos />
         <PageCTA />
       </main>
 
