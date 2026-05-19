@@ -9,14 +9,14 @@ export default function PageCTA() {
           Automated hybrid wind systems for real world energy efficient solutions.
         </p>
         <div className="flex items-center justify-center gap-4 flex-wrap">
-          <Link
-            to="/contact"
+          <a
+            href="tel:+918301860501"
             className="px-7 py-3 border border-border text-foreground ag-base-medium rounded-full hover:border-primary hover:text-primary btn-outline"
           >
             Talk to Us
-          </Link>
+          </a>
           <Link
-            to="/contact"
+            to="/try-it-yourself"
             className="px-7 py-3 btn-gradient text-white ag-medium-sm rounded-full"
           >
             Try it yourself

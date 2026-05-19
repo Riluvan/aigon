@@ -152,7 +152,11 @@ export default function TryItYourself() {
 
             {submitted ? (
               <div className="flex flex-col items-center justify-center py-24 text-center">
-                <img src={CircleCheck} alt="" aria-hidden="true" className="w-14 h-14 mb-5" />
+                <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-5">
+                  <svg className="w-8 h-8 text-green-500" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
                 <h3 className="ag-h3 text-foreground mb-3">Request Submitted!</h3>
                 <p className="ag-normal-base text-muted-foreground max-w-sm">
                   Thank you! Our team will analyse your requirements and get back to you with the ideal energy system composition.

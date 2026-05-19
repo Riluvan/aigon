@@ -146,9 +146,6 @@ function ServiceRow({ service }) {
           )
         })}
       </ul>
-      <button className="px-6 py-2.5 btn-gradient text-white ag-medium-sm rounded-full">
-        Learn more
-      </button>
     </div>
   )
 

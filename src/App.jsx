@@ -11,7 +11,7 @@ import TheStack from './components/TheStack'
 import CaseStudies from './components/CaseStudies'
 import ClientLogos from './components/ClientLogos'
 import CTA from './components/CTA'
-import Footer from './components/Footer'
+import PageFooter from './components/PageFooter'
 import ScrollToTop from './components/ScrollToTop'
 import About from './pages/About'
 import ProductsPage from './pages/Products'
@@ -56,7 +56,7 @@ function Home() {
         <CTA />
       </main>
 
-      <Footer />
+      <PageFooter />
       <ScrollToTop />
     </>
   )

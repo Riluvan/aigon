@@ -48,7 +48,7 @@ export default function PageFooter() {
 
           {/* Brand + address */}
           <address className="not-italic col-span-1">
-            <img src={footerLogo} alt="Aigon" className="h-7 w-auto mb-6" />
+            <Link to="/"><img src={footerLogo} alt="Aigon" className="h-7 w-auto mb-6" /></Link>
             <p className="ag-medium-sm text-foreground mb-1">Aigon Mechatronics Pvt. Ltd.</p>
             <p className="ag-normal-sm text-muted-foreground">
               165-A, Khadi Bhavan Road, Vadayambady,<br />
