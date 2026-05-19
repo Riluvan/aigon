@@ -8,7 +8,7 @@ const quickLinks = [
   { label: 'Connect',  to: '/contact'  },
 ]
 
-const phones = ['+91-7118 53 91', '+91-8301 860 501', '+91-8129 272 123']
+const phones = ['+91-7511185391', '+91-8301 860 501', '+91-8129 272 123']
 
 const socialIcons = [
   {

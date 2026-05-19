@@ -1,10 +1,10 @@
 import emailjs from '@emailjs/browser'
 
 // ─── Replace these three values from your EmailJS dashboard ───────────────────
-export const EJS_SERVICE_ID  = 'service_nadha'   // e.g. 'service_abc123'
-export const EJS_CONTACT_TID = 'template_nadha'    // e.g. 'template_xyz'
-export const EJS_FEASIBILITY_TID = 'template_nadha'
-export const EJS_PUBLIC_KEY  = 'SkcCK8ZfJ4kEr5aI5'   // e.g. 'user_xxxxxxxx'
+export const EJS_SERVICE_ID      = 'service_zbatep9'
+export const EJS_CONTACT_TID     = 'template_qwtk268'
+export const EJS_FEASIBILITY_TID = 'template_4bmnaef'
+export const EJS_PUBLIC_KEY      = 'jvUyItmwVw-a5V0BH'
 // ─────────────────────────────────────────────────────────────────────────────
 
 emailjs.init(EJS_PUBLIC_KEY)
