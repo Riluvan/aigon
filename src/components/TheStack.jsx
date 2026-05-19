@@ -1,4 +1,4 @@
-import stackImg from '../assets/Rectangle (1).png'
+import stackImg from '../assets/wind-turbine-solar.jpg'
 
 export default function TheStack() {
   return (

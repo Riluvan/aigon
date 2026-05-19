@@ -63,7 +63,7 @@ export default function Contact() {
           <div className="w-full h-72 md:h-96 rounded-2xl overflow-hidden bg-gray-200">
             <iframe
               title="Aigon Mechatronics location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.5479!2d76.3099!3d10.0261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d5c56d6b9b7%3A0x0!2zMTDCsDAxJzMzLjkiTiA3NsKwMTgnMzUuNiJF!5e0!3m2!1sen!2sin!4v1700000000000"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.5819383601424!2d76.44721857479311!3d9.968697690135144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b08750049cfbadb%3A0xb3c79ef7f76650d5!2sAigon%20Mechatronics%20pvt%20Ltd!5e0!3m2!1sen!2sin!4v1779212613839!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0 }}
