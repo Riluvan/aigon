@@ -5,6 +5,7 @@ import PartnerLogos from '../components/PartnerLogos'
 import PageCTA from '../components/PageCTA'
 import PageFooter from '../components/PageFooter'
 import CircleCheck from '../assets/CircleCheck.svg'
+import CircleMinus from '../assets/CircleMinus.svg'
 import agn1kImg from '../assets/product-agn1k.jpg'
 import agn3kImg from '../assets/product-agn3k.jpg'
 import agn5kImg from '../assets/product-agn5k.jpg'
@@ -89,6 +90,10 @@ const offGridFeatures = [
 
 function Check() {
   return <img src={CircleCheck} alt="" aria-hidden="true" className="mt-0.5 flex-shrink-0 w-5 h-5" />
+}
+
+function Minus() {
+  return <img src={CircleMinus} alt="" aria-hidden="true" className="mt-0.5 flex-shrink-0 w-5 h-5" />
 }
 
 function ProductRow({ product }) {
@@ -193,7 +198,7 @@ export default function Products() {
                 <ul className="space-y-4 list-none p-0 m-0">
                   {offGridFeatures.map((f) => (
                     <li key={f} className="flex items-start gap-3">
-                      <Check />
+                      <Minus />
                       <span className="ag-normal-base text-muted-foreground">{f}</span>
                     </li>
                   ))}
