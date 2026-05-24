@@ -1,4 +1,4 @@
-import bannerImg from '../assets/service-image10 1.png'
+import bannerImg from '../assets/service-image10.webp'
 import fanIcon from '../assets/Fan.svg'
 import powerIcon from '../assets/power.svg'
 import plugIcon from '../assets/Plug.svg'

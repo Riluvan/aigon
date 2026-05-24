@@ -30,6 +30,12 @@
     <!-- Canonical -->
     <link rel="canonical" href="https://aigon.in" />
 
+    <!-- Preload critical above-the-fold assets -->
+    <link rel="preload" as="image" href="/src/assets/Top-BG-mobile.webp" media="(max-width: 767px)" />
+    <link rel="preload" as="image" href="/src/assets/Top-BG-tablet.webp" media="(min-width: 768px) and (max-width: 1023px)" />
+    <link rel="preload" as="image" href="/src/assets/Top-BG.webp" media="(min-width: 1024px)" />
+    <link rel="preload" as="image" href="/src/assets/turbain-fan.webp" />
+
     <!-- Google Fonts: Manrope (primary) + DM Sans (secondary) — loaded async to avoid render-blocking -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

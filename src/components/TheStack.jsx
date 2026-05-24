@@ -1,4 +1,4 @@
-import stackImg from '../assets/wind-turbine-solar.jpg'
+import stackImg from '../assets/wind-turbine-solar.webp'
 
 export default function TheStack() {
   return (
