@@ -1,5 +1,5 @@
-import turbineLeg from '../assets/turbain-leg.png'
-import turbineFan from '../assets/turbain-fan.png'
+import turbineLeg from '../assets/turbain-leg.webp'
+import turbineFan from '../assets/turbain-fan.webp'
 import arrowDown from '../assets/arrow-down.svg'
 import arrowWhite from '../assets/arrow-white.svg'
 

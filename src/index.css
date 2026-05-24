@@ -28,7 +28,7 @@ body {
   font-family: 'DM Sans', system-ui, sans-serif;
   color: var(--color-foreground);
   background-color: #ffffff;
-  background-image: url('./assets/Top-BG-mobile.png');
+  background-image: url('./assets/Top-BG-mobile.webp');
   background-attachment: fixed;
   background-size: cover;
   background-position: center top;
@@ -119,20 +119,20 @@ h5 {
 /* Responsive background images */
 @media (min-width: 768px) {
   body {
-    background-image: url('./assets/Top-BG-tablet.png');
+    background-image: url('./assets/Top-BG-tablet.webp');
   }
 }
 
 @media (min-width: 1024px) {
   body {
-    background-image: url('./assets/Top-BG.png');
+    background-image: url('./assets/Top-BG.webp');
   }
 }
 
 /* Inner pages — override body background on desktop */
 @media (min-width: 1024px) {
   body.inner-page {
-    background-image: url('./assets/Top-BG-inner.png');
+    background-image: url('./assets/Top-BG-inner.webp');
     background-size: contain;
   }
 }
