@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async'
 import Navbar from '../components/Navbar'
 import PageHero from '../components/PageHero'
 import PageFooter from '../components/PageFooter'
+import WindChecker from '../components/WindChecker'
 import CircleCheck from '../assets/CircleCheck.svg'
 import { sendFeasibilityEmail } from '../lib/emailjs'
 
@@ -143,12 +144,24 @@ export default function TryItYourself() {
       <main>
         <PageHero
           label="Try it Yourself"
-          title="Know the feasibility"
-          subtitle="Tell us your energy requirements by filling up the following form and know the ideal composition of your desired power plant."
+          title="Is your site wind-ready?"
+          subtitle="Check real wind data for any location instantly, then share your energy requirements so our team can design the ideal power system for you."
         />
+
+        <WindChecker />
 
         <section className="bg-white py-20 overflow-hidden">
           <div className="max-w-3xl mx-auto px-6 lg:px-10" data-aos="fade-up">
+
+            {!submitted && (
+              <div className="mb-8">
+                <p className="ag-medium-sm text-primary uppercase tracking-wider mb-2">Step 2 — Request a Review</p>
+                <h2 className="ag-h4 text-foreground mb-2">Tell Us Your Requirements</h2>
+                <p className="ag-normal-base text-muted-foreground">
+                  Fill in the details below and our engineers will prepare a full feasibility report and system recommendation for your site.
+                </p>
+              </div>
+            )}
 
             {submitted ? (
               <div className="flex flex-col items-center justify-center py-24 text-center">
